@@ -1,37 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Flask File Upload and Basic Authentication App</title>
+<html lang = "en">
+   <head>
+   <meta charset = "utf-8">
+   <meta http-equiv="X-UA_Compatible" content = "IE=edge">
+   <meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no">
+   <!-- The above 3 meta tags *MUST* come forst in the head; any other head content must come *AFTER* those tags -->
+   <meta name = "description" content = "INFO3180 Project #01">
+   <meta name = "author" content = "Shazzam Austin">
 
-    <!-- Bootstrap -->
-    <link href="{{ url_for('static', filename="css/bootstrap.min.css") }}" rel="stylesheet">
+   <title> INFO3180 Project #01 </title>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+   <!-- Bootstrap -->
+   <link href = "{{ url_for('static', filename = 'css/bootstrap.min.css') }}" rel = "stylesheet">
+
+   			<!-- FROM LAB 4 base.html CODE -->
+   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <link rel="stylesheet" href="{{ url_for('static', filename="css/app.css") }}">
-    {% block css %} {% endblock%}
+
+   <link rel = "stylesheet" href = "{{ url_for('static', filename = 'css/app.css') }}">
+   {% block css %} {%endblock%}
+   
   </head>
   <body>
     <header>
-        {% include "header.html" %}
+	{% include "header.html" %}
     </header>
     <main>
-        <div class="container">
-            {% block main %}{% endblock %}
-        </div>
+	<div class = "container">
+		{% block main %}{% endblock %}
+	</div>
     </main>
     <footer>
-        <div class="container">
-            {% include "footer.html" %}
-        </div>
+	<div class = "container">
+		{% include "footer.html" %}
+	</div>
     </footer>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -39,5 +45,6 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="{{ url_for('static', filename="js/bootstrap.min.js") }}"></script>
     {% block js %} {% endblock%}
-  </body>
+    </body>
 </html>
+
