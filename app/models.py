@@ -15,15 +15,16 @@ class UserProfile(db.Model):
     profile_pic = db.Column(db.String(80))
     date_created = db.Column(db.String(80))
 
-    def __init__(self,firstName,lastName,gender,Email,location,biography,profile_picture,date_joined):
+    def __init__(self,firstName,lastName,gen,email,loc,bio,pic,date_joined):
         self.first_name = firstName
         self.last_name = lastName
-        self.gender = gender
-        self.email = Email
-        self.location = location
-        self.biography = biography
-        self.profile_pic = profile_picture
+        self.gender = gen
+        self.email = email
+        self.location = loc
+        self.biography = bio
+        self.profile_pic = pic
         self.date_created = date_joined
+        
 
     def get_id(self):
         try:
@@ -33,4 +34,7 @@ class UserProfile(db.Model):
 
     def __repr__(self):
         return '<User %r>' % (self.username)
+        
+
+        
     

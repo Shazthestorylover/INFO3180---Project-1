@@ -22,7 +22,7 @@ def home():
 """ Render the about page for the website """
 @app.route('/about/')
 def about():
-    return render_template('about.html', name = "Chanderpaul Campbell")
+    return render_template('about.html', name = "Shazzam Austin")
 
 
 """ Render the profile page for the website """
@@ -37,13 +37,13 @@ def profile():
 
             firstName = profileForm.firstName.data
             lastName  = profileForm.lastName.data
-            gender = profileForm.gender.data
-            Email = profileForm.Email.data
-            location = profileForm.location.data
-            biography = profileForm.biography.data
+            gen = profileForm.gender.data
+            email = profileForm.email.data
+            loc = profileForm.location.data
+            bio = profileForm.biography.data
             date_joined = format_date_joined()
 
-            user = UserProfile(firstName,lastName,gender,Email,location,biography,filename,date_joined)
+            user = UserProfile(firstName,lastName,gen,email,loc,bio,filename,date_joined)
 
             db.session.add(user)
             db.session.commit()

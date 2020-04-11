@@ -25,19 +25,23 @@
    {% block css %} {%endblock%}
    
   </head>
+  
+  
   <body>
     <header>
-	{% include "header.html" %}
+	    {% include "header.html" %}
     </header>
+    
     <main>
-	<div class = "container">
-		{% block main %}{% endblock %}
-	</div>
+	    <div class = "container">
+		    {% block main %}{% endblock %}
+	    </div>
     </main>
+    
     <footer>
-	<div class = "container">
-		{% include "footer.html" %}
-	</div>
+	    <div class = "container">
+		    {% include "footer.html" %}
+	    </div>
     </footer>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -46,5 +50,6 @@
     <script src="{{ url_for('static', filename="js/bootstrap.min.js") }}"></script>
     {% block js %} {% endblock%}
     </body>
+    
 </html>
 
