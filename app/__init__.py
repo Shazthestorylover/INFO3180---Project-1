@@ -12,7 +12,7 @@ user = 'SHAZ'
 password = 'Shaz1234'
 database = 'INFO3180_Project_#01'
 default = "postgresql://%s:%s@localhost/%s" % (user,password,database) 
-#heroku = 'postgresql://emgxrvvcxwkegj:b88d1a34cd8337edfaf89daf766753b402da35f0296f16e66863b063a2f6479b@ec2-3-234-169-147.compute-1.amazonaws.com:5432/dfpsub468628mv'
+#heroku = 'postgres://zajqwpbarejnhf:040063690ce3953033866218b60c4cf55f4836bffb741ee6cd8a6b8ac6f06bc3@ec2-34-193-232-231.compute-1.amazonaws.com:5432/d9endascgb7q21'
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = default
